@@ -42,7 +42,11 @@ public class CoreCompetency {
     //  ONLY a getter for the 'id' field.
 
     public String getValue() {
-        return value;
+        if(value == null || value == ""){
+            return "Data not available";
+        }else {
+            return value;
+        }
     }
 
     public void setValue(String value) {
