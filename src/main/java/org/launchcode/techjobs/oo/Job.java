@@ -31,6 +31,9 @@ public class Job {
     }
 
     public String getName() {
+        if (name == null || name.isEmpty()) {
+            return "Data not available";
+        }
         return name;
     }
 
@@ -90,12 +93,12 @@ public class Job {
     @Override
     public String toString() {
         return
-                "\nID: " + id +" \n" +
-                "Name: " + name + " \n" +
-                "Employer: " + employer.getValue() +" \n" +
-                "Location: " + location.getValue() +" \n" +
-                "Position Type: " + positionType.getValue() +" \n" +
-                "Core Competency: " + coreCompetency.getValue() +" \n";
+                "\nID: " + id +"\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer.getValue() +"\n" +
+                "Location: " + location.getValue() +"\n" +
+                "Position Type: " + positionType.getValue() +"\n" +
+                "Core Competency: " + coreCompetency.getValue() +"\n";
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
